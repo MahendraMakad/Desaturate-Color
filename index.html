@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.min.js" integrity="sha512-AvCfbOQzCVi2ctVWF4m89jLwTn/zVPJuS7rhiKyY3zqyCdbPqtvNa0I628GJqPytbowfFjkAGOpq85E5kQc40Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <section class="header p-4">
+      <div class="header-container p-5">
+        <h1 class="section-heading">Desaturate Color</h1>
+      </div>
+    </section>
+    <section class="hero p-4">
+      <div class="hero-container">
+      <div class="input-container p-5 box block">
+         <div class="mb-4 sub-heading">Your Color</div>
+         <div class="user-input grid-1">
+            <div id="text-input" class="is-flex-column">
+              <input id="colorValue" type="text" class="input mb-2" placeholder="hex value" value="#ABFF76" onChange="desaturateColor()"/>
+              <button class="button is-small" id="randomColor">Random Color</button>
+            </div>
+            <div id="color-input">
+               <input type="color" id="colorPicker" value="#ABFF76">
+                <p class="ml-3 has-text-grey-light">color picker</p>
+            </div>
+         </div>
+         <div class="mb-4 mt-4 sub-heading">Amount to De-saturate</div>
+         <div class="user-input grid-2">
+           <input id="desaturate-value"   type="range" min="0" max="68" value="34" class="slider">
+           <div id="slider-value" class="ml-4">50%</div>
+         </div>
+         <div class="has-text-grey">Adjust slider above to select the amount of de-saturation to apply to the color.</div>
+      </div>
+      <div class="output-container p-5 box block">
+          <div class="mb-4 sub-heading">New Color</div>
+          <div class="output py-5 px-2 grid-3">
+              <div id="text-output" class="is-flex-column is-justify-items-center has-background-white-ter mb-5 mr-2 box">
+                  <div id="hexValue" class="flex-item">HEX<span class="button is-small ml-4">#499593</span></div>
+                  <div id="rgbValue" class="flex-item">RGB<span class="button is-small ml-4">#499593</span></div>
+                  <div id="hslValue" class="flex-item">HSI<span class="button is-small ml-4">#499593</span></div>
+                  <div id="hsvValue" class="flex-item">HSV<span class="button is-small ml-4">#499593</span></div>
+              </div>
+              <div id="color-output p-2">
+                  <div id="color-display" class="box"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    <script src="javascript.js" defer></script>
+  </body>
+</html>
